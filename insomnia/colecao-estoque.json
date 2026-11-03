@@ -1,0 +1,388 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-10-27T12:00:00.000Z",
+  "__export_source": "insomnia.desktop.app:v10",
+  "resources": [
+    {
+      "_id": "wrk_estoque",
+      "_type": "workspace",
+      "parentId": null,
+      "name": "Controle de Estoque - Projeto Integrador",
+      "description": "",
+      "scope": "collection"
+    },
+    {
+      "_id": "fld_0",
+      "_type": "request_group",
+      "parentId": "wrk_estoque",
+      "name": "Fornecedores",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -1000
+    },
+    {
+      "_id": "req_01",
+      "_type": "request",
+      "parentId": "fld_0",
+      "name": "Cadastrar fornecedor (1º e 2º cenário)",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3001/fornecedores",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -999,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Distribuidora Alfa Ltda\",\n  \"cnpj\": \"11.444.777/0001-61\",\n  \"endereco\": \"Rua das Flores, 100, Centro, São Paulo - SP\",\n  \"telefone\": \"(11) 3456-7890\",\n  \"email\": \"contato@alfa.com.br\",\n  \"contatoPrincipal\": \"Maria Souza\"\n}"
+      }
+    },
+    {
+      "_id": "req_02",
+      "_type": "request",
+      "parentId": "fld_0",
+      "name": "Cadastrar fornecedor inválido (3º cenário)",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3001/fornecedores",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -998,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"\",\n  \"cnpj\": \"11.111.111/1111-11\",\n  \"telefone\": \"123\",\n  \"email\": \"x\"\n}"
+      }
+    },
+    {
+      "_id": "req_03",
+      "_type": "request",
+      "parentId": "fld_0",
+      "name": "Listar fornecedores",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3001/fornecedores",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -997,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "req_04",
+      "_type": "request",
+      "parentId": "fld_0",
+      "name": "Buscar fornecedor por id",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3001/fornecedores/1",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -996,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "req_05",
+      "_type": "request",
+      "parentId": "fld_0",
+      "name": "Atualizar fornecedor",
+      "description": "",
+      "method": "PUT",
+      "url": "http://localhost:3001/fornecedores/1",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -995,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Distribuidora Alfa S.A.\",\n  \"cnpj\": \"11.444.777/0001-61\",\n  \"endereco\": \"Rua das Flores, 100, Centro, São Paulo - SP\",\n  \"telefone\": \"(11) 3456-7890\",\n  \"email\": \"contato@alfa.com.br\",\n  \"contatoPrincipal\": \"Maria Souza\"\n}"
+      }
+    },
+    {
+      "_id": "req_06",
+      "_type": "request",
+      "parentId": "fld_0",
+      "name": "Remover fornecedor",
+      "description": "",
+      "method": "DELETE",
+      "url": "http://localhost:3001/fornecedores/1",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -994,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "fld_1",
+      "_type": "request_group",
+      "parentId": "wrk_estoque",
+      "name": "Produtos",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -999
+    },
+    {
+      "_id": "req_07",
+      "_type": "request",
+      "parentId": "fld_1",
+      "name": "Cadastrar produto (1º e 2º cenário)",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3001/produtos",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -993,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Teclado USB\",\n  \"codigoBarras\": \"7891234567895\",\n  \"descricao\": \"Teclado ABNT2 com fio\",\n  \"quantidadeEstoque\": 25,\n  \"preco\": 89.9,\n  \"categoria\": \"Eletrônicos\",\n  \"dataValidade\": \"\",\n  \"imagem\": \"\"\n}"
+      }
+    },
+    {
+      "_id": "req_08",
+      "_type": "request",
+      "parentId": "fld_1",
+      "name": "Cadastrar produto inválido (3º cenário)",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3001/produtos",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -992,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"\",\n  \"descricao\": \"\",\n  \"categoria\": \"\",\n  \"codigoBarras\": \"abc\"\n}"
+      }
+    },
+    {
+      "_id": "req_09",
+      "_type": "request",
+      "parentId": "fld_1",
+      "name": "Listar produtos",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3001/produtos",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -991,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "req_10",
+      "_type": "request",
+      "parentId": "fld_1",
+      "name": "Buscar produto por id",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3001/produtos/1",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -990,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "req_11",
+      "_type": "request",
+      "parentId": "fld_1",
+      "name": "Atualizar produto",
+      "description": "",
+      "method": "PUT",
+      "url": "http://localhost:3001/produtos/1",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -989,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"nome\": \"Teclado USB\",\n  \"codigoBarras\": \"7891234567895\",\n  \"descricao\": \"Teclado ABNT2 com fio\",\n  \"quantidadeEstoque\": 40,\n  \"preco\": 89.9,\n  \"categoria\": \"Eletrônicos\",\n  \"dataValidade\": \"\",\n  \"imagem\": \"\"\n}"
+      }
+    },
+    {
+      "_id": "req_12",
+      "_type": "request",
+      "parentId": "fld_1",
+      "name": "Remover produto",
+      "description": "",
+      "method": "DELETE",
+      "url": "http://localhost:3001/produtos/1",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -988,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "fld_2",
+      "_type": "request_group",
+      "parentId": "wrk_estoque",
+      "name": "Associação Produto-Fornecedor",
+      "description": "",
+      "environment": {},
+      "metaSortKey": -998
+    },
+    {
+      "_id": "req_13",
+      "_type": "request",
+      "parentId": "fld_2",
+      "name": "Associar fornecedor ao produto (1º e 2º cenário)",
+      "description": "",
+      "method": "POST",
+      "url": "http://localhost:3001/produtos/1/fornecedores",
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -987,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"fornecedorId\": 1\n}"
+      }
+    },
+    {
+      "_id": "req_14",
+      "_type": "request",
+      "parentId": "fld_2",
+      "name": "Desassociar fornecedor do produto (3º cenário)",
+      "description": "",
+      "method": "DELETE",
+      "url": "http://localhost:3001/produtos/1/fornecedores/1",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -986,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "req_15",
+      "_type": "request",
+      "parentId": "fld_2",
+      "name": "Fornecedores de um produto",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3001/produtos/1/fornecedores",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -985,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "req_16",
+      "_type": "request",
+      "parentId": "fld_2",
+      "name": "Produtos de um fornecedor",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3001/fornecedores/1/produtos",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -984,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    },
+    {
+      "_id": "req_17",
+      "_type": "request",
+      "parentId": "fld_2",
+      "name": "Listar todas as associações",
+      "description": "",
+      "method": "GET",
+      "url": "http://localhost:3001/associacoes",
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -983,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingFollowRedirects": "global",
+      "body": {}
+    }
+  ]
+}

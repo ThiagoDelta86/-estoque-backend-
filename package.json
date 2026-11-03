@@ -1,0 +1,27 @@
+{
+  "name": "controle-estoque-backend",
+  "version": "1.0.0",
+  "description": "Backend do Projeto Integrador Full Stack - Controle de Estoque (Faculdade GRAN)",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node --watch app.js",
+    "test": "node --test"
+  },
+  "keywords": [
+    "estoque",
+    "produtos",
+    "fornecedores"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "better-sqlite3": "^12.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "author": "",
+  "type": "commonjs"
+}
